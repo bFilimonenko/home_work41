@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Wars</title>
+  <link href="result.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+<main class="relative w-screen h-80 bg-cover bg-center bg-[url('img/bg-img.png')]">
+
+  <div class="relative max-w-4xl mx-auto text-center text-yellow-300 py-18">
+    <h1 class="text-5xl font-bold drop-shadow-xs">Star Wars</h1>
+  </div>
+
+  <nav id="navigation" class="absolute inset-x-0 bottom-0 flex justify-center gap-2 text-lg ">
+    <div id="people"
+         class="select-none tab-button px-6 py-2 bg-zinc-500 text-white rounded-t-lg border border-transparent hover:bg-zinc-400">
+      People
+    </div>
+    <div id="vehicles"
+         class="select-none tab-button px-6 py-2 bg-zinc-500 text-white rounded-t-lg border border-transparent hover:bg-zinc-400">
+      Vehicles
+    </div>
+    <div id="planets"
+         class="select-none tab-button px-6 py-2 bg-zinc-500 text-white rounded-t-lg border border-transparent hover:bg-zinc-400">
+      Planets
+    </div>
+  </nav>
+</main>
+
+
+<div class="hidden content-wrapper flex flex-col items-center p-6 bg-gray-200 h-fit">
+  <div class="content-text"></div>
+
+  <div class="content-button">
+    <button id="buttonLoadMore"
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg bg-gradient-to-br from-blue-600 from-30% via-zinc-50 via-55% to-red-600 to-80% shadow-lg shadow-red-500/50 disabled:opacity-40">
+      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md pointer-events-none">
+      Load more
+      </span>
+    </button>
+  </div>
+</div>
+
+<!--<script src="js/appPromise.js"></script>-->
+<script src="js/appAsyncAwait.js"></script>
+</body>
+</html>

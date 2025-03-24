@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@theme {
+    --font-economica-regular: Economica-Regular, sans-serif;
+    --font-economica-italic: Economica-Italic, sans-serif;
+    --font-economica-bolditalic: Economica-BoldItalic, sans-serif;
+    --font-economica-bold: Economica-Bold, sans-serif;
+}
+
+.active {
+    background-color: var(--color-zinc-200);
+    color: var(--color-zinc-700);
+    transition: color 0.5s;
+}
+
+@layer components {
+    .accordion-item {
+        width: clamp(18.75rem, 13.194rem + 27.78vw, 37.5rem);
+        @apply border border-yellow-300 rounded-lg overflow-hidden mb-4
+    }
+
+    .accordion-header {
+        @apply flex justify-between items-center w-full px-5 py-3 bg-yellow-100 hover:bg-yellow-200 transition
+    }
+
+    .accordion-header > span,
+    .accordion-header > svg {
+        pointer-events: none;
+    }
+
+    .description {
+        @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-5 text-gray-600
+    }
+}
