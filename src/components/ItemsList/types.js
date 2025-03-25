@@ -1,0 +1,30 @@
+export const entityMapping = {
+  people: [
+    'birth_year',
+    'eye_color',
+    'gender',
+    'hair_color',
+    'height',
+    'mass',
+    'skin_color'],
+  vehicles: [
+    'cargo_capacity',
+    'consumables',
+    'cost_in_credits',
+    'crew',
+    'length',
+    'manufacturer',
+    'max_atmosphering_speed',
+    'model',
+    'passengers',
+    'vehicle_class'],
+  planets: [
+    'climate',
+    'diameter',
+    'gravity',
+    'orbital_period',
+    'population',
+    'rotation_period',
+    'surface_water',
+    'terrain'],
+};

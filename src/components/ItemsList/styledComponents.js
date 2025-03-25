@@ -14,23 +14,23 @@ export const StyledAccordion = styled(Accordion)`
     overflow: hidden;
     margin-bottom: 10px;
 
-    &.css-1808mag-MuiPaper-root-MuiAccordion-root {
+    &.MuiPaper-root {
         border: 1px solid #ffdf20;
         border-radius: 4px;
     }
 `;
 
 export const StyledAccordionTitle = styled(AccordionSummary)`
-    &.css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root {
+    &.MuiButtonBase-root {
         background-color: #fef9c2;
-    }
-
-    &:hover {
-        background-color: #fff085;
+        &:hover {
+            background-color: #fff085;
+        }
     }
 `;
+
 export const StyledButton = styled(Button)`
-    &.css-1blvszr-MuiButtonBase-root-MuiButton-root {
+    &.MuiButtonBase-root {
         border: 2px solid transparent;
         border-radius: 8px;
         color: black;

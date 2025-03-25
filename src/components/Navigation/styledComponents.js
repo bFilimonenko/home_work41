@@ -24,18 +24,20 @@ export const StyledNav = styled(Tabs)`
     position: absolute;
     inset-inline: 0;
     bottom: 0;
-    & .css-hzcega-MuiTabs-list {
+
+    &.MuiTabs-root .MuiTabs-list {
         display: flex;
         justify-content: center;
         gap: 8px;
     }
-    & .css-1qltlow-MuiTabs-indicator {
+
+    &.MuiTabs-root .MuiTabs-indicator {
         display: none;
     }
 `;
 
 export const StyledTab = styled(Tab)`
-    &.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+    &.MuiButtonBase-root {
         padding: 8px 24px;
         background-color: #71717b;
         font-size: 18px;
@@ -44,9 +46,11 @@ export const StyledTab = styled(Tab)`
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         text-transform: none;
+
         &:hover {
             background-color: #9f9fa9;
         }
+
         &.Mui-selected {
             background-color: #e4e4e7;
             color: black;
