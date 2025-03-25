@@ -21,16 +21,16 @@ export const StyledBox = styled(Box)`
 `;
 
 export const StyledNav = styled(Tabs)`
-
     position: absolute;
     inset-inline: 0;
     bottom: 0;
-
     & .css-hzcega-MuiTabs-list {
         display: flex;
         justify-content: center;
         gap: 8px;
-        font-size: 18px;
+    }
+    & .css-1qltlow-MuiTabs-indicator {
+        display: none;
     }
 `;
 
@@ -38,16 +38,18 @@ export const StyledTab = styled(Tab)`
     &.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
         padding: 8px 24px;
         background-color: #71717b;
+        font-size: 18px;
+        font-weight: 500;
         color: white;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-
+        text-transform: none;
         &:hover {
             background-color: #9f9fa9;
         }
-
-        &.Mui-active {
+        &.Mui-selected {
             background-color: #e4e4e7;
+            color: black;
         }
     }
 `;
