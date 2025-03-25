@@ -20,15 +20,9 @@ export const Navigation = ({ setPage }) => {
         </StyledBox>
 
         <StyledNav value={value} onChange={handleChange}>
-          <StyledTab value={PAGES.PEOPLE} label="People" onClick={() => {
-            console.log(value);
-          }} />
-          <StyledTab value={PAGES.VEHICLES} label="Vehicles" onClick={() => {
-            console.log(value);
-          }} />
-          <StyledTab value={PAGES.PLANETS} label="Planets" onClick={() => {
-            console.log(value);
-          }} />
+          <StyledTab value={PAGES.PEOPLE} label="People" />
+          <StyledTab value={PAGES.VEHICLES} label="Vehicles" />
+          <StyledTab value={PAGES.PLANETS} label="Planets" />
         </StyledNav>
       </StyledMain>
     </>
