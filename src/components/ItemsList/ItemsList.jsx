@@ -3,7 +3,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { StyledStack } from './styledComponents.js';
+import { StyledAccordion, StyledAccordionTitle, StyledButton, StyledStack } from './styledComponents.js';
+import { Button } from '@mui/material';
 
 const entityMapping = {
   people: [
@@ -41,14 +42,14 @@ export const ItemsList = ({ entities, page }) => {
   return (
     <>
       <StyledStack>
-        {entities.map((item, key) => (<Accordion key={key}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+        {entities.map((item, key) => (<StyledAccordion key={key}>
+          <StyledAccordionTitle
+            expandIcon={<ExpandMoreIcon color='error' />}
             aria-controls={item.name}
             id={item.name}
           >
             <Typography component="span">{item.name}</Typography>
-          </AccordionSummary>
+          </StyledAccordionTitle>
           <AccordionDetails>
             {entityMapping[page].map((description, key) => item[description] &&
               <Typography key={key} variant="body1">
@@ -56,7 +57,9 @@ export const ItemsList = ({ entities, page }) => {
                 {item[description]}
               </Typography>)}
           </AccordionDetails>
-        </Accordion>))}
+        </StyledAccordion>))}
+
+        <StyledButton variant="outlined">Load more</StyledButton>
       </StyledStack>
     </>
   );
