@@ -1,10 +1,7 @@
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { StyledAccordion, StyledAccordionTitle, StyledButton, StyledStack } from './styledComponents.js';
-import { Button } from '@mui/material';
 
 const entityMapping = {
   people: [
@@ -37,7 +34,7 @@ const entityMapping = {
     'terrain'],
 };
 
-export const ItemsList = ({ entities, page }) => {
+export const ItemsList = ({ entities, page, loadNextPage, nextPageUrl }) => {
 
   return (
     <>
@@ -59,7 +56,7 @@ export const ItemsList = ({ entities, page }) => {
           </AccordionDetails>
         </StyledAccordion>))}
 
-        <StyledButton variant="outlined">Load more</StyledButton>
+        <StyledButton variant="outlined" onClick={loadNextPage} disabled={!nextPageUrl}>Load more</StyledButton>
       </StyledStack>
     </>
   );

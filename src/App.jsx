@@ -21,9 +21,9 @@ function App() {
   const [entities, setEntities] = useState([]);
 
   const loadEntities = async (url) => {
-
     const response = await fetch(url);
     const parsedResponse = await response.json();
+
     setNextPageUrl(parsedResponse.next);
     return parsedResponse.results;
   };
@@ -45,15 +45,20 @@ function App() {
 
     fetchData().catch(console.error);
 
-    console.log( page );
+    console.log(page);
   }, [page]);
+
+  const loadNextPage = async () => {
+    console.log(nextPageUrl);
+    const nextEntity = await loadEntities(nextPageUrl);
+    setEntities((prevEntities) => [...prevEntities, ...nextEntity]);
+    console.log(entities);
+  };
 
   return (
     <>
       <Navigation setPage={setPage} />
-      <ItemsList entities={entities} page={page} />
-      {/*main with tabs menu*/}
-      {/*items list*/}
+      <ItemsList entities={entities} page={page} loadNextPage={loadNextPage} nextPageUrl={nextPageUrl}/>
     </>
   );
 }
