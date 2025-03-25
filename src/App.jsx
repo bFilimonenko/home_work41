@@ -33,15 +33,12 @@ function App() {
       switch (page) {
         case PAGES.PEOPLE:
           setEntities(await loadEntities(API_URLS.people));
-          console.log('test people');
           break;
         case PAGES.VEHICLES:
           setEntities(await loadEntities(API_URLS.vehicles));
-          console.log('test vehicles');
           break;
         case PAGES.PLANETS:
           setEntities(await loadEntities(API_URLS.planets));
-          console.log('test planets');
           break;
       }
     };
